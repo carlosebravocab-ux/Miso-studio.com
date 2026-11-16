@@ -170,7 +170,7 @@ module.exports = async function handler(request, response) {
   }
 
   const itemSummary = orderItems
-    .map((item) => `${item.quantity} x ${item.name} (${item.size})`)
+    .map((item) => `${item.quantity} x $${item.name} (${item.size})`)
     .join(', ')
     .slice(0, 240);
   const [firstName, ...surnameParts] = name.split(/\s+/);
